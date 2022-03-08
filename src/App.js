@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+
+import logo from './assets/imagenes/logo.png'
+import Login from './componentes/Login'
+import Menu from './componentes/Menu'
+import React, { useState } from 'react';
+
 
 function App() {
+
+  const [conectado, setConectado]= useState(false);
+
+  const acceder = (estado)=> {
+    setConectado (estado)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    conectado ? <Menu/> : <Login acceder={acceder}/>
+    
   );
 }
 
