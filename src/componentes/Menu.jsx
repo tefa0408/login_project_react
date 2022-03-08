@@ -1,6 +1,6 @@
 export default function Menu(){
 
     return(
-        <h1>Menu</h1>
+        <h1>Bienvenido al Menu </h1>
     )
 }
